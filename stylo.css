@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*para que los del menu funcione*/
+
+https://www.youtube.com/watch?v=ivyIqmczxHU
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+/*.header .presentacion{
+    height: 35vh;
+    margin: 0 0 70px 0;
+}
+.header .presentacion .img-menu{
+    margin: 0 0 50px 0;
+    
+}*/
+.contenedor{
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;/*para que todo salgue del contenedor se ocualte*/
+    margin: auto;/*para que se entree*/
+    padding: 60px 0;/*para el separado de cada contenedor*/
+}
+/*ENCABEZADO***/
+header{
+    height: 100vh;/*100 viu por height es decir 100% de los que ocupa la pantalla*/
+    background-repeat: no-repeat;
+}
+/*la parte donde esta el logo y otrso*/
+.presentacion{
+    width: 100%;
+    height: 180px;
+    background: #DBE6F6;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #c76d31, #503a26e3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   display: inline-block;
+}
+.lado1, .centro, .lado2{
+    display: inline-block;
+}
+.lado1{
+    width: 380px;
+    margin-left: 50px;
+    padding-top: 50px;
+   /* background-color: lightcoral;*/
+}
+.slogan1{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 80;
+    font-style: italic;
+    font-family: 'Katibeh', cursive;
+    margin-left: 20px;
+   text-align: center;
+   vertical-align: middle;
+}
+.slogan2{
+    color: #f2f2f2;
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    font-weight: 70;
+}
+.centro{
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 20px;
+    /*background-color: lightseagreen;*/
+}
+.img-centro{
+    width: 170px;
+    height: 100px;
+    display: block;
+    margin-left: 58px;
+}
+.marca{
+    color: #000;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    /*fuente de letra*/
+    font-family: 'Archivo Black', sans-serif;
+   font-family: 'Lemon', cursive;
+    font-family: 'Patua One', cursive;
+    font-weight: bold;
+}
+.lado2{
+    /* background-color: darkmagenta;*/
+     width: 250px;
+     margin-left: 160px;
+     
+ }
+ .slogan3{
+     color: #fff;
+     font-size: 20px;
+     font-weight: 70;
+     font-style: italic;
+     font-family: 'Katibeh', cursive;
+     margin-left: 50px;  
+ }
+ .horizontal{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(250, 192, 0);
+    margin-top: 10px;
+}
+/*imagenes deslizar*/
+.slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 10s infinite alternate;
+    background-attachment: fixed;
+}
+.slider ul:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 500px;
+}
+@keyframes cambio{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+/*menu*/
+    .hamburguesa{
+        position: fixed; /*para que el icono hamburguesa  este  fijo*/
+        top: 30px;
+        right: 30px;/*el icono ira a la derecha con un margen de30px*/
+        background: #fff;/*su alredeor de icono blanco*/
+        width: 40px; /*ancho*/
+        height: 40px;
+        cursor: pointer;/*para que cuando el puntero este en el icono salgue una mano*/
+        border-radius: 10px;/*el icono tenga border circular*/
+        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    }
+    .menu-navegacion{
+        position: fixed;/*para que el menu se quede fijo*/
+        top: 0;
+        right: 0;
+        width: 20vw;/*30%de la pagina*/
+        height: 100%;
+        background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+        display: flex;
+        flex-direction: column;/*uno debajo de otro*/
+        justify-content: space-evenly;/*para que se reparta equitativamente*/
+       /* justify-content: center;*/
+       align-items: center;/*el menu se va centrar*/
+       transition: transform .3s ease-in-out;
+      transform: translate(110%);/*para hacer invisible a la menu*/
+       box-shadow:0 0 6px rgba(0, 0, 0, .5);
+       border-bottom-left-radius: 20px;
+       border-top-left-radius: 20px;
+    }
+   .spread{
+        transform: translate(0);
+    }
+    .menu-navegacion a{
+        color: #fff;
+        text-decoration: none;
+    }
+    
+   /*nuestro productos*/
+   .video1{
+    border: 3px solid #f2f2f2;
+    width: 500px;
+    align-items: center;
+   }
+   .subtitulo{
+       text-align: center;
+       font-weight: 70;
+       color: #d17f21;
+       margin-bottom: 40px;
+       font-size: 40px;
+       font-family: 'Patua One', cursive;
+   }
+   .contenedor-servicio{
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       flex-wrap: wrap;/*?*/
+   }
+   .contenedor-servicio video{
+       width: 40%;
+       box-shadow: 0 0 6px rgba(0, 0, 0, .9);
+   }
+   .checklist-servicio{
+       width: 45%;
+   }
+.service{
+    margin-bottom: 20px;
+}
+.contenedor-servicio p{
+    text-indent: 50px;/*sangria*/
+}
+.n-nosotros{
+    margin-bottom: 7px;
+    color: #800000;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);/*copiado del https://webgradients.com/*/
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;/*el numero se alinie al centro*/
+    border-radius: 50px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+/*GALERIA*/
+.galery{
+    background: #f2f2f2;
+}
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.img-galeria{
+    object-fit: cover;/*sirve la alinear las imagnes de diferentes dimenciones a una colecion de imagnes de mismas dimencion*/
+    width: 25%;
+    display: block;
+    margin-bottom: 130px;/* margen entre cada imagen*/
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);/*para que cada img tenga una sombre*/
+    cursor: pointer;/*en ves del puntero mano*/
+}
+/*EXPERTOS EN*/
+.experts{
+    display:flex ;/*las imagnes se junten*/
+    justify-content: space-evenly;/*las imagnes se ordenen euiqtativamente en la seccion*/
+    align-items:column;/*las iamgnes esten centreadas*/
+    flex-wrap: wrap;/*por si el contenido no cabe en la,linea lo enviara abajo*/
+}
+.cont-experts{
+    width: 30%;
+    text-align: 20px;
+    margin-bottom: 20px;
+}
+.cont-experts img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+    .n-expert{
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+        font-weight: 400;
+        text-align: center;
+    }
+    /*FOOTER*/
+    footer{
+        width: 100%;
+        background: #DBE6F6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #c76d31, #503a26e3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: inline-block;
+    }
+    .footer-content{
+        display: flex;/*para el texto se junte*/
+        justify-content: space-between;/*para que los elemnetos se alinien  uno en cada en esquina esquinas */
+        align-items: center;/*para que los elementos esten centrados*/
+        flex-wrap: wrap;/*por si un elemento no entra , se desplace hacia abajo**/
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .contact-us{
+        width: 30%;
+        color: #fff;
+       
+        text-align: center;
+    }
+    .brand h2{
+        font-weight: 500;
+        font-size:50% ;
+    }
+    .brand+p{
+        font-weight: 500;
+    }
+    .tingo{
+        font-weight: 500;
+        font-size:18px ;
+        font-weight: lighter;
+        font-family: 'Katibeh', cursive;
+    }
+    
+    .tingo i{
+        margin-right: 10px;
+        font-size: 30px;/*el tamaño del icono*/
+    }
+    .social-media{
+        width: 50%;
+        display: flex;/*los iconos se van repartir en espacios equitativos*/
+        justify-content: flex-end;/*para que lo ponga al final del contenedor*/
+    }
+    .social-media-icon{/*para que el icono este dentro de un circulo*/
+        display: inline-block;
+        margin-left: 20px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+    }
+    .social-media-icon:hover{/*para cuando pase el maus por el icono sale la mano*/
+        background: #fff;
+        color: #faea08;
+    }
+    .social-media-icon i{
+        font-size: 150%;
+        line-height: 60px;
+    }
+    .line{
+        width: 90%;
+        max-width:1200px ;
+        margin: 0 auto;/*auto ahacia los lados*/
+        height: 2px;
+        background: #fff;
+        margin-bottom: 60px;
+    }
+    /*fin*/
+    /*inico de css paar que la paguna sea adaptable a diferentes */ 
+    /*BREAKFAS*/
+    @media screen and (max-width:800px){
+        .menu-navegacion{
+            width: 50vw;/*cuando esta 800px en menu-navegacion medira de 50%*/
+        }
+        .titulo{
+            font-size:  40px;/*dimencion de letra*/
+        }
+        .contenedor-servicio img{
+            width: 80%;
+            margin-bottom: 40px;
+        }
+        .checklist-servicio{
+            width: 80%;
+        }
+        .service{
+            margin-bottom: 30px;
+        }
+        .img-galeria{
+            width: 45%;
+        }
+        .cont-experts{
+            width: 80%;
+        }
+        .footer-content{
+            justify-content: center;
+        }
+        .social-media{
+            width: 70%;
+            justify-content: space-evenly;
+        }
+        .social-media-icon{
+            margin-left: 0;
+        }
+        .social-media i{
+            margin-left: 0;
+        }
+
+        .contact-us{
+            text-align: center;
+            width: 80%;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width:500px){
+        .menu-navegacion{
+            width: 65%;
+        }
+        .hamburguesa{
+            top:20px;
+            right: 20px;
+        }
+        .titulo{
+           font-size: 30px;
+        }
+        .subtitulo{
+            font-size: 30px;
+        }
+        .img-galeria{
+            width: 95%;
+        }
+        .social-media{
+            width: 100%;
+        }
+        .contact-us{
+            width: 90%;
+        }
+    }
+
